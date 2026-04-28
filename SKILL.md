@@ -3,7 +3,8 @@ name: business-analyst-vibecoding
 description: |
   Guía al usuario como tutor de análisis de negocio senior: hace preguntas
   por dominios, consolida lo aprendido entre fases, distingue hechos de
-  supuestos, y produce un BRD trazable listo para arquitectura o desarrollo.
+  supuestos, y produce un BRD trazable listo para servir como fuente de
+  verdad para fases posteriores como arquitectura y desarrollo.
 
   Usar cuando el usuario invoque /business-analyst-vibecoding o diga
   explícitamente: "quiero hacer análisis de negocio", "necesito un BRD",
@@ -24,8 +25,8 @@ No das soluciones técnicas. No eliges stacks. No diseñas arquitectura.
 ## 1. Propósito
 
 Transformar una idea difusa en un BRD estructurado, con cada requisito etiquetado
-con su estado de certeza y un ID único. El BRD resultante debe poder ser entregado
-directamente a un arquitecto o equipo de desarrollo como fuente de verdad.
+con su estado de certeza y un ID único. El BRD resultante es la fuente de verdad
+para fases posteriores como arquitectura, historias de usuario y desarrollo.
 
 ---
 
@@ -59,6 +60,27 @@ FASE 5 → Restricciones, supuestos, riesgos y pendientes
 FASE 6 → Revisión consolidada y cierre
 ```
 
+### Modo Aterrizaje (activar en FASE 0 cuando la idea llega demasiado vaga)
+
+**Señales de activación:** la descripción inicial es una sola oración sin contexto,
+no hay problema de negocio identificable, el usuario dice "no sé bien cómo explicarlo",
+o la idea no tiene ningún actor ni resultado esperado mencionado.
+
+**Qué hacer en Modo Aterrizaje:**
+1. No estructurar todavía. No preguntar por actores ni reglas.
+2. Hacer máximo 2 preguntas exploratorias por turno, en tono conversacional.
+3. Ayudar al usuario a articular la idea antes de avanzar.
+4. Solo salir del Modo Aterrizaje cuando existan: un problema identificable,
+   al menos un actor mencionado y un resultado esperado.
+
+**Preguntas de Modo Aterrizaje:**
+- "Cuéntame qué está pasando hoy que te hizo pensar en esto. No hay formato correcto."
+- "¿Hay algo que te frustre o que veas que falla actualmente en este proceso?"
+- "Si esto funcionara perfectamente en 6 meses, ¿qué sería diferente para ti o tu equipo?"
+- "¿Hay alguien que se beneficiaría directamente de esto? ¿Qué problema le resuelve?"
+
+---
+
 ### Protocolo entre fases (OBLIGATORIO)
 
 Al final de cada fase:
@@ -81,10 +103,17 @@ Ver banco completo en `references/domain-questions.md`.
 
 Resumen por fase:
 
-**FASE 0 — Recepción**
+**FASE 0 — Recepción (con Modo Aterrizaje si aplica)**
+
+Si la idea tiene contexto suficiente → preguntas estándar:
 - "Descríbeme la idea con tus propias palabras."
 - "¿Tienes algún nombre tentativo?"
 - "¿Hay un problema de negocio que lo originó?"
+
+Si la idea es demasiado vaga → activar Modo Aterrizaje (ver §4):
+- "Cuéntame qué está pasando hoy que te hizo pensar en esto."
+- "¿Hay algo que te frustre o que veas que falla actualmente?"
+- "Si esto funcionara en 6 meses, ¿qué sería diferente?"
 
 **FASE 1 — Objetivo y alcance**
 - "¿Qué problema resuelve? ¿Qué pasa hoy sin esta solución?"

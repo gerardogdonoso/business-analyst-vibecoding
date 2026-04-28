@@ -71,7 +71,7 @@ The skill runs 7 short, cumulative phases:
 
 | Phase | Focus |
 |-------|-------|
-| 0 | Idea reception — free-form description |
+| 0 | Idea reception — with **Landing Mode** for very vague ideas |
 | 1 | Business objective and scope |
 | 2 | Actors and processes |
 | 3 | Business rules and data |

@@ -9,11 +9,40 @@ Usar como guía durante las fases de entrevista. Nunca hacer más de 3 preguntas
 
 Objetivo: entender el contexto sin estructurar aún.
 
+### Modo estándar (idea con contexto suficiente)
+
+Usar cuando el usuario describe una idea con al menos un problema identificable,
+un actor mencionado o un resultado esperado.
+
 - "Descríbeme la idea con tus propias palabras. No te preocupes por la estructura."
 - "¿Tienes algún nombre tentativo para este producto, feature o proceso?"
 - "¿Hay un problema de negocio concreto que originó esta idea?"
 - "¿Esto ya existe de alguna forma, aunque sea manual o parcial?"
 - "¿Tienes alguna referencia de cómo funciona algo similar en otro contexto?"
+
+### Modo Aterrizaje (idea demasiado vaga)
+
+**Activar cuando:** la descripción inicial es una sola oración sin contexto,
+no hay problema identificable, el usuario dice "no sé bien cómo explicarlo",
+o la idea no menciona ningún actor ni resultado esperado.
+
+**Qué NO hacer en Modo Aterrizaje:** no preguntar por actores, reglas, datos ni
+alcance. Primero ayudar al usuario a articular la idea.
+
+**Preguntas exploratorias (máximo 2 por turno, tono conversacional):**
+- "Cuéntame qué está pasando hoy que te hizo pensar en esto. No hay formato correcto."
+- "¿Hay algo que te frustre o que veas que falla actualmente en este proceso o área?"
+- "Si esto funcionara perfectamente en 6 meses, ¿qué sería diferente para ti o tu equipo?"
+- "¿Hay alguien que se beneficiaría directamente de esto? ¿Qué problema le resuelve?"
+- "¿Hay alguna situación concreta que hayas vivido que haya disparado esta idea?"
+
+**Condiciones para salir del Modo Aterrizaje y pasar al modo estándar:**
+- Existe un problema de negocio identificable.
+- Hay al menos un actor o beneficiario mencionado.
+- Hay un resultado esperado, aunque sea vago.
+
+Cuando se cumplan estas condiciones, continuar con las preguntas estándar de Fase 0
+y luego avanzar a Fase 1 con la confirmación del usuario.
 
 ---
 
