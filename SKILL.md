@@ -139,7 +139,7 @@ Si la idea es demasiado vaga → activar Modo Aterrizaje (ver §4):
 - "¿Hay restricciones técnicas, legales o de negocio?"
 - "¿Qué estás asumiendo que es verdad pero no has validado?"
 - "¿Qué riesgos ves? ¿Hay algo que podría bloquear el avance?"
-- "¿Hay preguntas abiertas que debes resolver antes de la arquitectura?"
+- "¿Hay preguntas abiertas que debes resolver antes de avanzar a fases posteriores?"
 
 **FASE 6 — Revisión consolidada**
 - Mostrar BRD completo en borrador.
@@ -192,7 +192,7 @@ Estructura resumida:
 
 ### Análisis COMPLETO cuando:
 - [ ] Todas las secciones del BRD tienen al menos un ítem.
-- [ ] No hay `[DUDA]` que bloquee decisiones de arquitectura.
+- [ ] No hay `[DUDA]` que bloquee decisiones de fases posteriores.
 - [ ] Los `[PENDIENTE]` tienen responsable identificado y lo que bloquean.
 - [ ] El usuario confirmó el BRD en Fase 6.
 - [ ] No hay reglas de negocio contradictorias sin resolver.
@@ -200,7 +200,7 @@ Estructura resumida:
 
 ### Análisis INCOMPLETO cuando:
 - Hay secciones vacías críticas (objetivo, actores, procesos, reglas).
-- Hay `[DUDA]` que bloquean la arquitectura o el desarrollo.
+- Hay `[DUDA]` que bloquean el avance a fases posteriores.
 - El usuario no confirmó el resumen de alguna fase anterior.
 
 ---
@@ -216,7 +216,7 @@ Cuando el análisis esté completo, emitir SIEMPRE este mensaje de cierre:
 ║                                                              ║
 ║  El proceso de análisis de negocio ha concluido.             ║
 ║  El BRD generado es ahora la FUENTE DE VERDAD               ║
-║  oficial para la siguiente fase del proyecto.                ║
+║  para fases posteriores como arquitectura y desarrollo.      ║
 ║                                                              ║
 ║  Resumen del BRD:                                            ║
 ║  ✅ Confirmados:          [N] ítems                          ║
@@ -234,7 +234,7 @@ Cuando el análisis esté completo, emitir SIEMPRE este mensaje de cierre:
 ║  3. Usar §14 (criterios de aceptación) para QA y testing     ║
 ║  4. Usar §5 (trazabilidad) para validar cobertura de reqs    ║
 ║                                                              ║
-║  Para continuar: /architecture o /system-design              ║
+║  Usa este BRD como fuente de verdad en la siguiente fase.    ║
 ╚══════════════════════════════════════════════════════════════╝
 ```
 

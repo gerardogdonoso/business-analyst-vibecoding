@@ -161,4 +161,4 @@
 ---
 
 *Documento generado por la skill `business-analyst-vibecoding`.*
-*Para continuar con la siguiente fase: entregar este BRD como fuente de verdad al arquitecto o equipo técnico.*
+*Este BRD es la fuente de verdad para fases posteriores como arquitectura, historias de usuario y desarrollo.*

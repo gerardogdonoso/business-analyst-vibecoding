@@ -154,7 +154,7 @@ y luego avanzar a Fase 1 con la confirmación del usuario.
 - "¿Hay riesgos de adopción por parte de los usuarios?"
 
 ### Pendientes
-- "¿Hay preguntas abiertas que debes resolver antes de continuar con la arquitectura?"
+- "¿Hay preguntas abiertas que debes resolver antes de avanzar a la siguiente fase?"
 - "¿Hay decisiones de negocio que aún no están tomadas?"
 - "¿Hay partes del proceso que aún no conoces bien?"
 - "¿Hay personas que necesitas consultar antes de avanzar?"
@@ -171,7 +171,7 @@ Objetivo: validar el BRD completo con el usuario.
 - "¿Hay ítems PENDIENTE que puedas resolver ahora antes de cerrar?"
 - "¿Estás de acuerdo con la priorización MoSCoW definida?"
 - "¿Hay supuestos que en realidad ya están confirmados y debo actualizar?"
-- "¿El documento puede ser entregado a un arquitecto tal como está, o falta algo?"
+- "¿El BRD puede usarse como fuente de verdad para fases posteriores tal como está, o falta algo?"
 
 ---
 

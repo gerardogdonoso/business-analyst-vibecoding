@@ -12,7 +12,7 @@ Instead of jumping straight to technical solutions, this skill guides you throug
 - Traceable IDs for all requirements, rules, assumptions, and risks (`RN-001`, `SA-001`, `CA-001`...)
 - MoSCoW prioritization
 - Acceptance criteria in Given/When/Then format
-- An explicit closure message when analysis is complete and the BRD is ready for the next phase
+- An explicit closure message when analysis is complete and the BRD is ready to serve as the source of truth for subsequent phases such as architecture and development
 
 **What it does NOT do:** architecture, stack selection, or coding. Its only output is the BRD.
 
@@ -143,7 +143,7 @@ When the analysis is complete, the skill emits an explicit closure message:
 ╠══════════════════════════════════════════════════════════════╣
 ║  The business analysis process has concluded.                ║
 ║  The generated BRD is now the official SOURCE OF TRUTH       ║
-║  for the next phase of the project.                          ║
+║  for subsequent phases such as architecture and development. ║
 ║  ...                                                         ║
 ╚══════════════════════════════════════════════════════════════╝
 ```
