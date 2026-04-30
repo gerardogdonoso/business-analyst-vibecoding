@@ -85,7 +85,7 @@ The skill runs 7 short, cumulative phases:
 
 ---
 
-## BRD output (15 sections)
+## BRD output (16 sections)
 
 ```
 1.  Business objective        [OB-XXX]
@@ -103,6 +103,7 @@ The skill runs 7 short, cumulative phases:
 13. Open questions            [PE-XXX]
 14. Acceptance criteria       [CA-XXX]  (Given / When / Then)
 15. Traceability matrix
+16. Handoff block             (references to existing IDs only)
 ```
 
 ---
