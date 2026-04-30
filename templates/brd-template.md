@@ -148,6 +148,37 @@
 
 ---
 
+## 16. Handoff para la siguiente fase
+
+> Resumen compacto derivado exclusivamente del BRD. Solo cita IDs ya registrados — no introduce información nueva.
+
+### Decisiones de negocio cerradas
+| ID | Descripción |
+|----|-------------|
+| [OB-XXX / RN-XXX] | [Una línea] |
+
+### Supuestos activos que la siguiente fase debe respetar
+| ID | Supuesto |
+|----|----------|
+| [SA-XXX] | [Una línea] |
+
+### Pendientes bloqueantes antes de avanzar
+| ID | Qué falta | Bloquea |
+|----|-----------|---------|
+| [PE-XXX] | [Una línea] | [Qué fase/decisión] |
+
+### Reglas críticas que no deben reinterpretarse
+| ID | Regla |
+|----|-------|
+| [RN-XXX] | [Una línea] |
+
+### Riesgos y restricciones vigentes
+| ID | Descripción |
+|----|-------------|
+| [RG-XXX / RE-XXX] | [Una línea] |
+
+---
+
 ## Leyenda de estados
 
 | Estado | Significado |

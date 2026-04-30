@@ -84,10 +84,11 @@ o la idea no tiene ningún actor ni resultado esperado mencionado.
 ### Protocolo entre fases (OBLIGATORIO)
 
 Al final de cada fase:
-1. Mostrar resumen de lo acumulado con sus etiquetas de estado.
-2. Preguntar: "¿Este resumen es correcto antes de continuar?"
-3. Solo avanzar cuando el usuario confirme.
-4. Al inicio de cada fase, hacer un breve recap de lo aprendido en fases anteriores.
+1. Verificar que todas las preguntas del turno anterior tienen respuesta explícita del usuario. Si falta alguna, pedirla antes de continuar. No resumir ni avanzar con huecos sin responder.
+2. Mostrar resumen de lo acumulado con sus etiquetas de estado.
+3. Preguntar: "¿Este resumen es correcto antes de continuar?"
+4. Solo avanzar cuando el usuario confirme.
+5. Al inicio de cada fase, hacer un breve recap de lo aprendido en fases anteriores.
 
 ### Modo de preguntas
 
@@ -133,7 +134,7 @@ Si la idea es demasiado vaga → activar Modo Aterrizaje (ver §4):
 **FASE 4 — Casos borde, éxito y prioridades**
 - "¿Qué pasa cuando algo falla? ¿Cuáles son los casos borde conocidos?"
 - "¿Cómo sabremos que esto funciona? ¿Cuál es el criterio de éxito?"
-- "Priorización MoSCoW: ¿qué es Must / Should / Could / Won't?"
+- Priorización MoSCoW (condicional): formular solo si hay señales de priorización real (urgencia de entrega, riesgo de scope creep, necesidad de definir una v1 mínima). Si el usuario ya indicó que no hay urgencia ni necesidad de recorte, registrar `[SA-XXX] Sin necesidad de priorización diferenciada para la primera versión` en §11 y dejar §9 con ese supuesto en lugar de preguntar.
 
 **FASE 5 — Restricciones, supuestos, riesgos, pendientes**
 - "¿Hay restricciones técnicas, legales o de negocio?"
@@ -190,18 +191,38 @@ Estructura resumida:
 
 ## 8. Criterios de cierre del análisis
 
+### Paso previo obligatorio: revisión de consistencia interna
+
+Antes de mostrar el mensaje de cierre, ejecutar esta revisión sobre los IDs ya registrados en el BRD (nunca inventar nuevos ítems):
+
+**Consistencia entre reglas (#4):**
+- Verificar que ningún par de reglas registradas (RN-XXX) tiene condiciones solapadas o contradictorias.
+- Verificar que ningún supuesto activo (SA-XXX) contradice una regla confirmada (RN-XXX).
+- Verificar que los criterios de éxito (CE-XXX) son medibles y no usan absolutos vagos ("siempre", "nunca", "todo").
+- Si se detecta algo, marcarlo `[DUDA]` y preguntarlo al usuario antes de continuar.
+
+**Calidad de redacción (#6):**
+- Identificar frases subjetivas, criterios no verificables o mezclas entre negocio e implementación.
+- Para cada problema encontrado, presentar al usuario: texto original → problema detectado → redacción sugerida.
+- Solo actualizar el BRD cuando el usuario apruebe explícitamente cada cambio propuesto.
+- Nunca auto-aplicar correcciones de redacción.
+
+Si ambas revisiones pasan sin observaciones, continuar al mensaje de cierre.
+
 ### Análisis COMPLETO cuando:
-- [ ] Todas las secciones del BRD tienen al menos un ítem.
+- [ ] Todas las secciones del BRD tienen al menos un ítem (incluyendo §9 y §16).
 - [ ] No hay `[DUDA]` que bloquee decisiones de fases posteriores.
 - [ ] Los `[PENDIENTE]` tienen responsable identificado y lo que bloquean.
 - [ ] El usuario confirmó el BRD en Fase 6.
-- [ ] No hay reglas de negocio contradictorias sin resolver.
+- [ ] La revisión de consistencia interna no dejó contradicciones sin resolver.
 - [ ] Los criterios de aceptación son verificables (Dado/Cuando/Entonces).
+- [ ] El bloque §16 Handoff está completo con referencias a IDs existentes.
 
 ### Análisis INCOMPLETO cuando:
 - Hay secciones vacías críticas (objetivo, actores, procesos, reglas).
 - Hay `[DUDA]` que bloquean el avance a fases posteriores.
 - El usuario no confirmó el resumen de alguna fase anterior.
+- Hay correcciones de redacción propuestas pendientes de aprobación del usuario.
 
 ---
 
@@ -230,9 +251,9 @@ Cuando el análisis esté completo, emitir SIEMPRE este mensaje de cierre:
 ║                                                              ║
 ║  Próximos pasos sugeridos:                                   ║
 ║  1. Resolver pendientes bloqueantes (§13) antes de avanzar   ║
-║  2. Entregar este BRD al arquitecto / equipo técnico         ║
+║  2. Usar este BRD como entrada para la siguiente fase o skill ║
 ║  3. Usar §14 (criterios de aceptación) para QA y testing     ║
-║  4. Usar §5 (trazabilidad) para validar cobertura de reqs    ║
+║  4. Usar §15 (trazabilidad) para validar cobertura de reqs   ║
 ║                                                              ║
 ║  Usa este BRD como fuente de verdad en la siguiente fase.    ║
 ╚══════════════════════════════════════════════════════════════╝

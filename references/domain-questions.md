@@ -123,7 +123,19 @@ y luego avanzar a Fase 1 con la confirmación del usuario.
 - "¿Hay un criterio de aceptación desde la perspectiva del usuario?"
 - "¿Qué significaría que esto fracasó?"
 
-### Prioridades MoSCoW
+### Prioridades MoSCoW (condicional)
+
+**Formular solo si hay al menos una de estas señales:**
+- El usuario mencionó urgencia, fecha límite o presión de entrega.
+- Hay riesgo de scope creep (demasiadas funcionalidades).
+- El usuario quiere definir una versión mínima diferenciada de versiones futuras.
+- Hay dependencias externas que podrían forzar un recorte de alcance.
+
+**Si ninguna señal está presente:** registrar en §11 (Supuestos):
+`[SA-XXX] Sin necesidad de priorización diferenciada para la primera versión [SUPUESTO]`
+y dejar §9 del BRD con ese supuesto en lugar de preguntar.
+
+**Preguntas (solo cuando aplica):**
 - "Si tuvieras que priorizar, ¿qué es imprescindible para la primera versión?"
 - "¿Qué podría venir en una segunda versión sin afectar el valor principal?"
 - "¿Hay algo que sería bueno tener pero no es crítico?"
