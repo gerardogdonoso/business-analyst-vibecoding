@@ -1,6 +1,7 @@
 # Business Requirements Document (BRD)
 
 **Proyecto/Feature:** [nombre]
+**Tipo de necesidad:** Sistema nuevo | Feature | Bug
 **Versión:** 1.0
 **Fecha:** [fecha]
 **Estado:** BORRADOR | REVISADO | APROBADO
@@ -15,6 +16,17 @@
 |----|----------|--------|
 | OB-001 | [Descripción del objetivo principal] | [CONFIRMADO] |
 | OB-002 | [Objetivo secundario si existe] | [SUPUESTO] |
+
+### 1b. Modelo de negocio y conversión *(solo para sistemas nuevos o features de producto)*
+
+> Omitir esta subsección para bugs y procesos operativos sin modelo de negocio.
+
+| ID | Elemento | Descripción | Estado |
+|----|----------|-------------|--------|
+| MB-001 | Modelo de valor | [Suscripción / pago único / freemium / ads / interno / otro] | [CONFIRMADO] |
+| MB-002 | Quién paga | [¿Es el mismo usuario que usa? ¿Hay separación comprador/usuario?] | [CONFIRMADO] |
+| MB-003 | Evento de conversión | [Acción concreta que define que un usuario convirtió] | [CONFIRMADO] |
+| MB-004 | KPI de éxito de negocio | [Métrica real de negocio, no solo técnica] | [CONFIRMADO] |
 
 ---
 

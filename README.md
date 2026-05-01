@@ -10,9 +10,13 @@ Instead of jumping straight to technical solutions, this skill guides you throug
 
 - Every requirement tagged with its certainty status: `[CONFIRMADO]`, `[SUPUESTO]`, `[DUDA]`, `[RIESGO]`, `[PENDIENTE]`
 - Traceable IDs for all requirements, rules, assumptions, and risks (`RN-001`, `SA-001`, `CA-001`...)
-- MoSCoW prioritization
+- Need-type classification in Phase 0 (new system / feature / bug) — adjusts the flow and avoids irrelevant questions
+- Conditional business model and conversion validation in Phase 1 — only when it adds value
+- MoSCoW prioritization — conditional, only when there are real prioritization signals
 - Acceptance criteria in Given/When/Then format
-- An explicit closure message when analysis is complete and the BRD is ready to serve as the source of truth for subsequent phases such as architecture and development
+- Pre-closure consistency and quality review before declaring the BRD complete
+- A handoff block (§16) summarizing key decisions, assumptions, blockers, and risks for the next phase
+- An explicit closure message when analysis is complete and the BRD is ready to serve as the source of truth for subsequent phases
 
 **What it does NOT do:** architecture, stack selection, or coding. Its only output is the BRD.
 
@@ -71,17 +75,47 @@ The skill runs 7 short, cumulative phases:
 
 | Phase | Focus |
 |-------|-------|
-| 0 | Idea reception — with **Landing Mode** for very vague ideas |
-| 1 | Business objective and scope |
+| 0 | Need-type classification (new system / feature / bug) + idea reception + **Landing Mode** for vague ideas |
+| 1 | Business objective, scope, and conditional business model validation |
 | 2 | Actors and processes |
 | 3 | Business rules and data |
-| 4 | Edge cases, success criteria, MoSCoW priorities |
+| 4 | Edge cases, success criteria, conditional MoSCoW priorities |
 | 5 | Constraints, assumptions, risks, open questions |
-| 6 | Consolidated review and BRD closure |
+| 6 | Consistency review + quality review + consolidated BRD closure |
 
-**Between every phase:** the skill summarizes what it has learned and waits for your confirmation before advancing. It never skips ahead, never invents information, and never proposes technical solutions.
+**Between every phase:** the skill verifies all questions were answered, summarizes what it has learned, and waits for your confirmation before advancing. It never skips ahead, never invents information, and never proposes technical solutions.
 
 **Maximum 3 questions per turn** — no overwhelming lists.
+
+### Need-type classification (Phase 0)
+
+The first question in Phase 0 classifies the type of need. This adjusts the entire flow:
+
+| Type | Flow |
+|------|------|
+| **New system** | Full analysis (Phases 0–6) |
+| **Feature** | Delta analysis — only what changes, affected actors, scope of the change |
+| **Bug / operational problem** | Diagnostic flow — symptom, reproduction condition, impact, resolution criteria |
+
+### Tutor behavior
+
+The skill acts as an analytical tutor, not just an interviewer:
+- Evaluates response quality — detects incoherent or contradictory answers before registering them as `[CONFIRMADO]`
+- Offers examples or options as guidance when you're unsure — always marked `[SUPUESTO]` until you confirm
+- Requests reformulation if a response isn't solid enough to register
+- Clearly separates what *you said* (`[CONFIRMADO]`) from what *the skill inferred or suggested* (`[SUPUESTO]`)
+
+### Business model validation (Phase 1, conditional)
+
+Only activated for new systems or product features with economic value. Not triggered for bugs, internal tools, or operational processes without a business model.
+
+Questions cover: how the solution generates value, who pays, the conversion event, and the real business KPI.
+
+### Pre-closure reviews (Phase 6)
+
+Before declaring the BRD complete, the skill runs two mandatory checks:
+1. **Consistency review** — checks for contradictory rules, assumptions that conflict with confirmed rules, and unmeasurable success criteria
+2. **Quality review** — flags subjective phrases, absolute statements, or business/implementation mixing; proposes rewrites for user approval (never auto-applies)
 
 ---
 
@@ -154,8 +188,11 @@ When the analysis is complete, the skill emits an explicit closure message:
 ## Anti-hallucination rules
 
 - Never invents information the user hasn't provided — asks instead
+- Verifies all questions in a turn are answered before advancing to the next phase
 - Uses the user's exact terminology (no renaming entities)
 - Tags every item with its certainty status
+- Evaluates response quality — detects incoherent or contradictory answers before registering as `[CONFIRMADO]`
+- Clearly separates user-provided information from skill-provided guidance (`[SUPUESTO]`)
 - Does not advance phases without explicit user confirmation
 - Does not propose technical solutions during business analysis
 

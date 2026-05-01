@@ -5,9 +5,29 @@ Usar como guía durante las fases de entrevista. Nunca hacer más de 3 preguntas
 
 ---
 
-## FASE 0 — Recepción de la idea
+## FASE 0 — Clasificación, recepción y aterrizaje
 
-Objetivo: entender el contexto sin estructurar aún.
+Objetivo: clasificar el tipo de necesidad y entender el contexto antes de estructurar.
+
+### Clasificación del tipo de necesidad (PRIMER PASO OBLIGATORIO)
+
+Antes de cualquier otra pregunta, identificar el tipo con una sola pregunta:
+- "¿Esto es algo completamente nuevo, una mejora sobre algo que ya existe, o un problema/bug a resolver?"
+
+| Tipo | Flujo activado |
+|------|----------------|
+| Sistema nuevo | Preguntas estándar + flujo completo (Fases 0–6) |
+| Feature | Preguntas acotadas al delta: qué cambia, en qué parte del sistema, actores afectados |
+| Bug / problema operativo | Preguntas diagnósticas: síntoma, condición de reproducción, impacto, criterio de resolución |
+
+**Preguntas diagnósticas para bugs (reemplaza el flujo estándar):**
+- "¿Qué comportamiento exacto observas? ¿En qué condición ocurre?"
+- "¿Cuál es el impacto operativo? (usuarios afectados, proceso bloqueado, frecuencia)"
+- "¿Cómo sabremos que el problema está resuelto? ¿Cuál es el criterio de aceptación?"
+
+*Para bugs: omitir o reducir al mínimo Fases 2–5. No generar secciones vacías.*
+
+---
 
 ### Modo estándar (idea con contexto suficiente)
 
@@ -46,7 +66,7 @@ y luego avanzar a Fase 1 con la confirmación del usuario.
 
 ---
 
-## FASE 1 — Objetivo de negocio y alcance
+## FASE 1 — Objetivo de negocio, alcance y modelo de negocio
 
 ### Objetivo de negocio
 - "¿Qué problema resuelve esto exactamente? ¿Qué pasa hoy sin esta solución?"
@@ -54,6 +74,19 @@ y luego avanzar a Fase 1 con la confirmación del usuario.
 - "¿Hay alguna métrica o KPI que deba mejorar con esto?"
 - "¿Para cuándo necesitas esto funcionando? ¿Hay una fecha límite de negocio?"
 - "¿Quién patrocina o tiene interés directo en que esto exista?"
+
+### Modelo de negocio y conversión (condicional)
+
+**Activar solo si:** el tipo de necesidad es sistema nuevo o feature sobre un producto con usuarios y valor económico.
+**No activar para:** bugs, herramientas internas sin modelo de negocio, procesos operativos sin conversión.
+
+- "¿Cómo genera valor económico esta solución? (suscripción, pago único, freemium, ads, interno, otro)"
+- "¿Quién paga por esto? ¿Es el mismo que lo usa?"
+- "¿Qué evento específico define que un usuario convirtió?"
+- "¿Qué KPI mide el éxito real del negocio, más allá del técnico?"
+- "¿Hay diferencia entre el usuario que usa el producto y quien toma la decisión de compra?"
+
+Si el usuario no tiene claro el modelo: registrar `[DUDA-MB]` y continuar sin asumir un modelo.
 
 ### Alcance
 - "¿Qué está dentro del alcance de este análisis?"

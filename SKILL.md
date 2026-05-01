@@ -60,6 +60,23 @@ FASE 5 → Restricciones, supuestos, riesgos y pendientes
 FASE 6 → Revisión consolidada y cierre
 ```
 
+### Clasificación del tipo de necesidad (OBLIGATORIO en FASE 0)
+
+Antes de avanzar a Fase 1, identificar el tipo de necesidad con una sola pregunta:
+> "¿Esto es algo completamente nuevo, una mejora sobre algo que ya existe, o un problema/bug a resolver?"
+
+| Tipo | Descripción | Flujo |
+|------|-------------|-------|
+| **Sistema nuevo** | Producto, servicio o proceso que no existe aún | Flujo completo (Fases 0–6) |
+| **Feature** | Cambio o extensión sobre un sistema existente | Flujo acotado: solo delta de reglas, actores afectados y alcance del cambio |
+| **Bug / problema operativo** | Síntoma, error o falla en algo existente | Flujo diagnóstico: síntoma, condición de reproducción, impacto, criterio de resolución |
+
+**Para features:** analizar solo el delta respecto al sistema actual. Omitir preguntas de actores globales o procesos completos ya documentados.
+**Para bugs:** reducir el análisis a lo mínimo diagnóstico. No generar secciones vacías. Omitir Fases 2–5 o resumirlas al mínimo útil.
+**Siempre:** registrar el tipo en el encabezado del BRD como `Tipo de necesidad`.
+
+---
+
 ### Modo Aterrizaje (activar en FASE 0 cuando la idea llega demasiado vaga)
 
 **Señales de activación:** la descripción inicial es una sola oración sin contexto,
@@ -104,22 +121,31 @@ Ver banco completo en `references/domain-questions.md`.
 
 Resumen por fase:
 
-**FASE 0 — Recepción (con Modo Aterrizaje si aplica)**
+**FASE 0 — Clasificación, recepción y Modo Aterrizaje**
 
-Si la idea tiene contexto suficiente → preguntas estándar:
-- "Descríbeme la idea con tus propias palabras."
-- "¿Tienes algún nombre tentativo?"
-- "¿Hay un problema de negocio que lo originó?"
+Primer paso obligatorio — clasificar el tipo de necesidad:
+- "¿Esto es algo completamente nuevo, una mejora sobre algo que ya existe, o un problema/bug a resolver?"
 
-Si la idea es demasiado vaga → activar Modo Aterrizaje (ver §4):
-- "Cuéntame qué está pasando hoy que te hizo pensar en esto."
-- "¿Hay algo que te frustre o que veas que falla actualmente?"
-- "Si esto funcionara en 6 meses, ¿qué sería diferente?"
+Según la respuesta, ajustar el flujo:
+- **Sistema nuevo** → preguntas estándar + flujo completo
+- **Feature** → preguntas acotadas al delta: qué cambia, en qué parte del sistema, actores afectados
+- **Bug** → preguntas diagnósticas: síntoma, condición de reproducción, impacto, criterio de resolución
 
-**FASE 1 — Objetivo y alcance**
+Si la idea es demasiado vaga antes de clasificar → activar Modo Aterrizaje (ver §4).
+
+**FASE 1 — Objetivo, alcance y modelo de negocio**
 - "¿Qué problema resuelve? ¿Qué pasa hoy sin esta solución?"
 - "¿Qué está dentro del alcance y qué queda explícitamente fuera?"
 - "¿Hay integraciones con sistemas externos?"
+
+**Modelo de negocio y conversión (condicional — solo para sistemas nuevos o features de producto):**
+No activar para bugs, herramientas internas sin modelo de negocio explícito ni procesos operativos.
+- "¿Cómo genera valor económico esta solución? (suscripción, pago único, freemium, ads, interno, otro)"
+- "¿Quién paga? ¿Es el mismo usuario que usa el producto?"
+- "¿Qué evento específico define que un usuario convirtió?"
+- "¿Qué KPI mide el éxito de negocio real (no solo el técnico)?"
+
+Si el usuario no tiene claro el modelo: registrar `[DUDA]` y continuar. No asumir un modelo.
 
 **FASE 2 — Actores y procesos**
 - "¿Quiénes son los actores? (roles, no personas)"
@@ -161,6 +187,10 @@ Si la idea es demasiado vaga → activar Modo Aterrizaje (ver §4):
 | Sin técnica | Si el usuario menciona una solución técnica, registrarla como restricción o supuesto. |
 | Separar hechos | Indicar cuándo se está interpretando algo no dicho literalmente. |
 | Confirmar fases | No avanzar de fase sin aprobación explícita del usuario. |
+| Evaluar calidad de respuesta | No solo verificar si es vaga. Si la respuesta es incoherente con ítems ya registrados, detectarlo y pedir aclaración antes de registrar como `[CONFIRMADO]`. |
+| Orientar sin confirmar | Si el usuario no sabe responder, ofrecer ejemplos u opciones orientativas. Marcarlos como `[SUPUESTO]` hasta que el usuario los confirme explícitamente. Nunca convertir orientación de la skill en hecho confirmado. |
+| Pedir reformulación si es débil | Si una respuesta no es suficientemente sólida o contradice algo ya confirmado, pedir que el usuario la reformule antes de registrarla. |
+| Separar aportes usuario vs skill | Distinguir siempre entre lo que el usuario dijo ([CONFIRMADO]) y lo que la skill aportó como orientación o inferencia ([SUPUESTO]). Dejar esto explícito en el resumen de fase. |
 
 ---
 
@@ -270,10 +300,14 @@ Cuando el análisis esté completo, emitir SIEMPRE este mensaje de cierre:
 | Hacer más de 3 preguntas por turno | Abruma al usuario y pierde contexto |
 | No resumir entre fases | El modelo pierde coherencia en conversaciones largas |
 | Marcar como `[CONFIRMADO]` algo dicho vagamente | Produce falsa certeza |
+| Marcar como `[CONFIRMADO]` una respuesta incoherente con lo ya registrado | Produce BRDs con contradicciones internas |
 | Avanzar de fase sin aprobación | Rompe la trazabilidad |
 | Mezclar análisis con decisiones de diseño | Contamina el BRD |
 | Usar sinónimos para el mismo concepto | Rompe trazabilidad entre secciones |
 | Omitir el mensaje de cierre | El usuario no sabe que el análisis terminó |
+| Tratar una feature como sistema nuevo | Genera preguntas irrelevantes y quema tokens innecesarios |
+| Activar preguntas de modelo de negocio para bugs | El modelo de negocio no aplica a diagnósticos operativos |
+| Convertir orientación de la skill en [CONFIRMADO] | Las opciones que la skill propone son [SUPUESTO] hasta que el usuario las confirme explícitamente |
 
 ---
 
