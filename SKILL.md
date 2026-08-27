@@ -405,8 +405,28 @@ Verificar:
 4. [BN-XXX] con evidencia documentada y al menos una alternativa.
 5. [PE-XXX] que bloqueen decisiones de fases posteriores.
 6. Respuestas "no sé" sin activar §7.
-7. Todo [RN]/[PR]/[RE] es comprobable: se puede responder "¿cómo sabríamos que se
-   cumple?". Si no se puede, reescribir o marcar [DUDA].
+7. Todo [RN]/[PR]/[RE] es comprobable — **y la vara NO es *«¿cómo sabríamos que se
+   cumple?»*, que acepta un juicio como respuesta** (*«leyendo la conversación se
+   ve»*), **sino: «¿con qué REGISTRO o EVENTO se responde sí/no?»**. El que
+   construye no puede mirar una conversación y opinar; puede mirar un registro.
+   🔴 **Caso registrado (26-08-2026): una cacería con este lente sobre un BRD
+   APROBADO** — todos los filtros de lectura en verde, 1.157 elementos — **encontró
+   92 frases no programables** (*hostilidad, negativa explícita, «pide hablar con
+   una persona», «señales de duda», «contenido anómalo»*), que pasaban la pregunta
+   débil; **33 tenían consecuencia dura colgando de un juicio del modelo**.
+   **El usuario habla en su idioma y ese es SU rol; operacionalizar es de esta
+   skill:** sus palabras quedan `[CONFIRMADO]` tal cual, y la skill agrega el
+   ancla — el registro, el evento, la lista cerrada o el número — o la marca que
+   declara su ausencia. **Toda conducta cuya condición solo el modelo puede leer
+   se resuelve en UNA de tres salidas, en el momento de escribirla: (a)** colgarla
+   de una **ACCIÓN REGISTRADA** — lo que el agente HIZO, no lo que el mensaje
+   ERA — (el precedente: un cobro que dependía de «hostilidad» se movió al cierre
+   registrado que la hostilidad produce); **(b)** declararla **«solo pedible al
+   modelo»** — vive en el prompt y **NINGUNA consecuencia dura** (cobro, bloqueo,
+   cierre, escalamiento obligatorio) **puede colgar de ella**; **(c)** crear el
+   **evento registrable** como dato de §6. Si no se puede elegir salida, no falta
+   redacción: **falta una decisión de negocio, y se pregunta**. Si aun así queda
+   sin ancla, marcar [DUDA].
 8. Cobertura: toda [RN], todo [PR] (incluidos [PR-ALT]/[PR-EXC]) y todo [CB] tienen
    al menos un [CA] que los cubre; todo [RN]/[PR] contribuye a algún [OB] o [CE] (el
    huérfano se elimina o se justifica). **Los procesos TAMBIÉN exigen criterio:** la
