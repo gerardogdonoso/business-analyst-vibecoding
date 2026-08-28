@@ -69,7 +69,7 @@ información y funciona como tarea. Caso registrado: de seis consecuencias prese
 eran derivables y ya estaban resueltas, y el usuario tuvo que responder *"no sé para qué me las
 mencionas, ¿tengo que decidir?"* antes de poder opinar sobre las dos que sí eran suyas. **Cada ítem
 sale etiquetado con quién decide** —del usuario, o derivado y ya aplicado con su derivación citada—,
-y los derivados van después, no intercalados. Y de cuatro preguntas de un mismo turno, dos volvieron con "conviene investigar cuál es el estándar": una pregunta sin tarea hecha le transfiere el trabajo al supervisor, que es exactamente la persona cuyo trabajo esta skill existe para reducir. |
+y los derivados van después, no intercalados. Y de cuatro preguntas de un mismo turno, dos volvieron con "conviene investigar cuál es el estándar": una pregunta sin tarea hecha le transfiere el trabajo al supervisor, que es exactamente la persona cuyo trabajo esta skill existe para reducir. **Y la pregunta de catálogo llega CON SU ESCENA** —qué es la cosa, dónde se ve, qué dispara— **nunca en abstracto**: dos casos en un mismo día (28-08) de lista preguntada sin escena produjeron una respuesta sobre OTRO objeto (se preguntó por los valores que el agente DETECTA y el dueño respondió por el TONO con que responde) y un *«no entiendo el contexto»* — la escena convierte la pregunta en decisión; el abstracto la convierte en adivinanza. |
 | 13 | 🔴 **Toda decisión del dueño se CONTRASTA contra el estándar, y el contraste queda escrito aunque él no cambie de idea.** Esta skill está construida para registrarlo fielmente —*sus palabras exactas*, `[CONFIRMADO]` = *lo dijo*— y **eso, solo, la vuelve taquígrafa**: el dueño decide A, la industria publicó B, y nadie se lo dice. **Cuando exista una respuesta publicada y DISTINTA a lo que él acaba de decidir, se le dice en el momento, en tres partes: (1) qué dice el estándar y con qué fuente, (2) dónde queda su decisión respecto de él —por encima, por debajo, o simplemente en otra rama—, y (3) qué se recomienda y POR QUÉ.** ⚠️ **Contrasta, NO veta:** su decisión se aplica igual, sigue siendo `[CONFIRMADO]` y no se re-litiga después — insistir es desobedecer, no analizar. ✅ **Y el contraste se REGISTRA aunque él mantenga su decisión**, con su razón si la da: *«lo sabíamos y elegimos otra cosa»* y *«no lo sabíamos»* son estados distintos, y solo el primero se puede defender ante un cliente, un inversionista o un tribunal. **Dónde queda escrito, para que no dependa de la memoria de nadie:** el hallazgo va a **§18 como `[INV-XXX]` con su fuente**, y **el elemento decidido conserva su `[CONFIRMADO]`** y suma la nota *«contrastado contra `INV-XXX`: el estándar hace Y; se elige Z porque …»*. Si la decisión es posterior a la aprobación, su fila de **§19** lo dice también. **Cuándo se dispara, para que no sea ruido:** solo cuando la diferencia tiene **costo medible** —dinero, exposición legal, un compromiso que no se va a poder cumplir, o un número que no se va a sostener—. **No se dispara** sobre preferencias, sobre lo que la industria no ha zanjado, ni sobre lo que ya se contrastó una vez. |
 
 ---
@@ -370,6 +370,16 @@ Verificar:
    herramientas · guardas · registro · pruebas · ciclo de vida · conducta de
    saturación) **auditada de una vez contra todas las instancias** — el goteo
    se acaba cuando ya no queda dónde gotear.
+   **Y la disciplina del hallazgo del propio auditor, porque dos veces en un
+   día (28-08) el cazado fue el analista y quien lo cazó fue el dueño:** un
+   hallazgo de AUSENCIA (*«el documento no lo dice»*) solo se reporta tras
+   búsqueda EXHAUSTIVA — sin límite de resultados y con sinónimos: un *«no
+   existe»* se concluyó sobre una lista truncada a 15 resultados y la regla
+   estaba pasado el corte. Y un hallazgo de CONTRADICCIÓN exige confirmar que
+   ambos textos hablan de LA MISMA entidad — el patrón dos-nombres también
+   fabrica contradicciones FANTASMA: dos entidades distintas fusionadas por el
+   analista bajo un nombre produjeron una contradicción que no existía. Ambas
+   comprobaciones existen para que el dueño no tenga que ser el último control.
 2. [SA-XXX] que contradiga [RN-XXX] confirmado.
 3. TODOS los ítems sin lenguaje vago: subjetivos ("fácil de usar", "amigable"),
    loopholes ("si es posible", "según corresponda"), comparativos sin referencia,
