@@ -356,6 +356,20 @@ Verificar:
    mitad del control** — escribir el criterio obliga a leer juntos los
    elementos que verifica, y ahí es donde las contradicciones aparecen:
    registrarlas al verlas, no seguir de largo.
+   **Y la segunda clase que se esconde: la respuesta capturada por la entidad
+   dominante.** Cuando el documento declara una taxonomía de N entidades de una
+   clase (agentes, módulos, canales), toda regla «de sistema» tiende a
+   escribirse solo para la entidad más nombrada — la gravedad del corpus lo
+   empuja. Caso medido (28-08-2026): la entidad principal con **580 menciones
+   contra 13/8/2** de sus hermanas; el dueño corrigió TRES veces en un día la
+   respuesta por-una-entidad —capas, señales, saturación— y las tres veces la
+   entidad dominante escondía hoyos reales en las otras. Dos defensas: **toda
+   pregunta o regla de sistema se responde POR CADA entidad de la taxonomía
+   antes de darse por cerrada**; y contra el goteo de piezas faltantes, **la
+   FICHA: una plantilla de campos obligatorios por instancia** (definición ·
+   herramientas · guardas · registro · pruebas · ciclo de vida · conducta de
+   saturación) **auditada de una vez contra todas las instancias** — el goteo
+   se acaba cuando ya no queda dónde gotear.
 2. [SA-XXX] que contradiga [RN-XXX] confirmado.
 3. TODOS los ítems sin lenguaje vago: subjetivos ("fácil de usar", "amigable"),
    loopholes ("si es posible", "según corresponda"), comparativos sin referencia,
