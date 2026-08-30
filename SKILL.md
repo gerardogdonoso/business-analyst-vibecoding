@@ -557,6 +557,38 @@ antes.
 **criterios de aceptación y las notas** que la citan. Un `CA` que verifica el mundo
 anterior no rompe ningún verificador de IDs y se lee como vigente.
 
+🔴 **(4-bis) Y el barrido va en las DOS DIRECCIONES, no en una. Esto se agrega el
+29-08-2026 porque la cláusula anterior miraba solo una y el caso se escapó por la otra.**
+El corolario de arriba cubre **quién CITA al elemento que cambió**. Falta la dirección
+contraria: **a quién CITA el elemento NUEVO.** Un elemento nuevo suele nombrar a los
+viejos como respaldo —*«la doctrina ya existía: `RN-169`, `PR-075`»*— y **al mismo tiempo
+deroga una de sus cláusulas sin decirlo**; el citado queda vivo, diciendo lo de antes.
+
+**Evidencia, del propio proyecto:** `RN-351` nació citando a `RN-169` como respaldo y
+declarando que **en voz la consulta es SIEMPRE DIFERIDA**, mientras `RN-169` seguía
+ofreciendo una rama *«en línea, donde el lead ESPERA»*. **Ni siquiera era el caso «dos
+reglas que no se citan» que el cazador asume: SE CITABAN.** La premisa muerta además
+había bajado a `AL-029`, que hoy tiene una cola llamada *«un lead esperando en línea»*.
+Lo detectó el dueño preguntando, no una herramienta — y su reacción fue la correcta:
+*«¿hay mecanismo para que estas reglas obsoletas desaparezcan cuando aparece otra que las
+reemplaza?»*.
+
+**Cómo se ejecuta, y ya no depende de acordarse:**
+
+```bash
+python tools/cazador-obsoletos.py --relectura
+```
+
+Imprime, para los IDs que la fila de **§19** declara tocados, las dos listas: **(b) a
+quién citan** —la que ninguna otra herramienta nombra— y **(a) quién los cita**. Con
+`--relectura <version>` se revisa una versión anterior. ⚠️ **Nombra, no compara
+significados: leerlos sigue siendo trabajo humano**, y la corrida debe declarar que lo
+hizo, igual que la estampa *«leídas las partes que el control nombró»* hace con los
+documentos derivados. **Medido sobre la v4.08 del proyecto que lo originó, la lista (b)
+contenía los tres defectos que la cacería con agente confirmó después** (`RN-351`→`RN-169`,
+`RN-352`→`RN-199`, y `CA-453` contra el predicado nuevo de `RN-319`).
+
+
 **(5) Correr `tools/cazador-obsoletos.py`, porque la cascada por cita tiene un punto
 ciego estructural.** `docs-fresh` computa la herencia **por ID citado** — su propio código
 lo dice: *«solo mira los IDs que este doc ya cita»*. **Dos elementos que se contradicen sin
