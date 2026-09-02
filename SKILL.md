@@ -71,6 +71,7 @@ mencionas, ¿tengo que decidir?"* antes de poder opinar sobre las dos que sí er
 sale etiquetado con quién decide** —del usuario, o derivado y ya aplicado con su derivación citada—,
 y los derivados van después, no intercalados. Y de cuatro preguntas de un mismo turno, dos volvieron con "conviene investigar cuál es el estándar": una pregunta sin tarea hecha le transfiere el trabajo al supervisor, que es exactamente la persona cuyo trabajo esta skill existe para reducir. **Y la pregunta de catálogo llega CON SU ESCENA** —qué es la cosa, dónde se ve, qué dispara— **nunca en abstracto**: dos casos en un mismo día (28-08) de lista preguntada sin escena produjeron una respuesta sobre OTRO objeto (se preguntó por los valores que el agente DETECTA y el dueño respondió por el TONO con que responde) y un *«no entiendo el contexto»* — la escena convierte la pregunta en decisión; el abstracto la convierte en adivinanza. **Y ante la duda de QUIÉN decide algo, el default es preguntarse primero *«¿ya lo resolvió la industria o la ley?»* — NUNCA asignárselo al usuario directamente: asignarle lo investigable lo invita a INVENTAR, que es justo lo que esta skill existe para impedir.** Evidencia: dos veces en una misma ventana (28-08) el analista clasificó como «decisión del dueño» algo que la ley y la literatura ya tenían resuelto (una relación entre agentes con patrón publicado; un filtro de tácticas con lista negra regulatoria de la FTC), y las dos veces el dueño lo devolvió: *«el que decide no soy yo — no estamos escribiendo las leyes de la industria desde cero; datos empíricos, no supuestos»*. |
 | 13 | 🔴 **Toda decisión del dueño se CONTRASTA contra el estándar, y el contraste queda escrito aunque él no cambie de idea.** Esta skill está construida para registrarlo fielmente —*sus palabras exactas*, `[CONFIRMADO]` = *lo dijo*— y **eso, solo, la vuelve taquígrafa**: el dueño decide A, la industria publicó B, y nadie se lo dice. **Cuando exista una respuesta publicada y DISTINTA a lo que él acaba de decidir, se le dice en el momento, en tres partes: (1) qué dice el estándar y con qué fuente, (2) dónde queda su decisión respecto de él —por encima, por debajo, o simplemente en otra rama—, y (3) qué se recomienda y POR QUÉ.** ⚠️ **Contrasta, NO veta:** su decisión se aplica igual, sigue siendo `[CONFIRMADO]` y no se re-litiga después — insistir es desobedecer, no analizar. ✅ **Y el contraste se REGISTRA aunque él mantenga su decisión**, con su razón si la da: *«lo sabíamos y elegimos otra cosa»* y *«no lo sabíamos»* son estados distintos, y solo el primero se puede defender ante un cliente, un inversionista o un tribunal. **Dónde queda escrito, para que no dependa de la memoria de nadie:** el hallazgo va a **§18 como `[INV-XXX]` con su fuente**, y **el elemento decidido conserva su `[CONFIRMADO]`** y suma la nota *«contrastado contra `INV-XXX`: el estándar hace Y; se elige Z porque …»*. Si la decisión es posterior a la aprobación, su fila de **§19** lo dice también. **Cuándo se dispara, para que no sea ruido:** solo cuando la diferencia tiene **costo medible** —dinero, exposición legal, un compromiso que no se va a poder cumplir, o un número que no se va a sostener—. **No se dispara** sobre preferencias, sobre lo que la industria no ha zanjado, ni sobre lo que ya se contrastó una vez. |
+| 14 | 🔴 **Todo lo que se escribe —BRD o respuesta— se redacta en castellano normativo, y ACORTAR NO AUTORIZA A INTRODUCIR AMBIGÜEDAD.** 🔑 **Y esto NO contradice al principio 8: sus palabras exactas son la fuente del CONTENIDO —el término del negocio, la decisión, el porqué—; la SINTAXIS es responsabilidad del redactor.** Se conserva su vocabulario y se corrige la construcción: calcar su orden de palabras traslada al documento una ambigüedad que él no pidió, y **el lector del BRD es quien no puede repreguntar** — una frase con dos lecturas se resuelve en silencio y queda escrita en el código. **Las tres clases del defecto, con su nombre técnico:** **(a) Anfibología** *(ambigüedad sintáctica)* — la frase admite dos o más interpretaciones por orden confuso de las palabras o uso impreciso de pronombres (*«Juan fue al cine con Pedro en su auto»* → ¿de quién era el auto?). **(b) Referencia anafórica rota** *(deixis rota)* — un pronombre (*él, ella, su, suyo*) sin antecedente explícito, o ubicado entre dos sujetos posibles sin delimitar cuál es. **(c) Sujeto indeterminado o tácito ambiguo** — se omite el sujeto creyendo que el contexto lo aclara, y el verbo en tercera persona permite atribuir la acción a varias entidades ya mencionadas. ✅ **Las tres soluciones que la norma exige:** **especificar el nombre**, **reestructurar el orden de la oración**, o **sustituir el posesivo ambiguo por una construcción aclaratoria** (*«el de este»*, *«el de aquel»*). 🔴 **Y dos fallas de LÓGICA propias del resumen, distintas de la ambigüedad: (1)** afirmar que varios hallazgos *«son el mismo»* y enumerar a continuación problemas de naturaleza distinta —**compartir la causa raíz no los vuelve uno solo**—; **(2)** agrupar bajo una etiqueta común elementos que no la comparten, para que la lista cuadre. **Comprobaciones, verificables en la propia frase: si se afirma que varias cosas SON UNA, debe sostenerse ítem por ítem; y todo pronombre debe poder reemplazarse por su sustantivo sin que cambie el sentido.** ⚠️ **Aplica con más fuerza aquí que en cualquier otro documento: un `[RN]` ambiguo no lo caza ningún verificador de IDs, se aprueba en su puerta y baja a los criterios de aceptación** — que es donde una lectura equivocada se vuelve una prueba equivocada.  ⚠️ **Y las tres construcciones que casi siempre esconden el defecto, para revisarlas ANTES de enviar la frase y no después:** **(i) elipsis con artículo** —*«la del BRD»*, *«el de arriba»*, *«en las dos»*— cuando el sustantivo omitido no es el único posible en ese párrafo; **(ii) el posesivo *su / sus*** con dos antecedentes a la vista; **(iii) las impersonales** —*«hay que»*, *«se debe»*, *«queda por»*, *«corresponde»*— que borran a quien ejecuta la acción. **Las tres se corrigen del mismo modo: nombrando** — el sustantivo, el poseedor y el sujeto. *(Evidencia de que el aviso hace falta: esta misma regla se escribió y se rompió en la frase inmediatamente siguiente, con las tres construcciones a la vez.)* |
 
 ---
 
@@ -328,11 +329,25 @@ Must sin [CA])
 - NO usar §18 (Investigaciones) como funcionales: es evidencia de decisión — nada de ahí se implementa por sí mismo. Que un competidor citado tenga algo no es requisito de tenerlo
 - Cierre por default: toda sección no listada en este handoff es contexto, no requisitos. Lo exigible vive únicamente en §1-§15
 
-## 18. Registro de investigaciones (vacía solo si no hubo investigación)
-[INV-001] Hallazgo... | Fuente: ... [ESTADO]
+## 18. Registro de investigaciones — VIVE EN `docs/BRD-evidencia.md`, no aquí
+(en el BRD queda solo la fila de §16 de cada INV y las citas «contrastado contra
+`INV-XXX`». El archivo de evidencia comparte el espacio de IDs y `docs-check` lo lee
+como fuente de definición. Formato de cada fila, y las dos exigencias que la vuelven
+evidencia y no opinión:)
+[INV-001] Hallazgo con sus cifras | FUENTE RECOMPROBABLE | [ESTADO]
+  · FUENTE RECOMPROBABLE = nombra al menos UNA de cuatro cosas: dirección web ·
+    documento con nombre propio · norma con su número y artículo · fecha de consulta.
+    «Guías 2026» o «benchmarks públicos» NO es fuente: nadie puede volver a abrirla.
+    La que no cumpla lleva [FUENTE NO RECOMPROBABLE] y no sostiene decisión nueva.
+  · Lo ABIERTO Y LEÍDO se separa de lo VISTO REFERIDO; una página de venta de un
+    proveedor se declara como tal y nunca entra como hecho medido.
+  · Una investigación que otra corrige lleva [SUPERADA por INV-XXX] en su propia fila.
 
 ## 19. Historial de cambios (post-aprobación)
 <fecha> | vX.Y | IDs afectados | motivo | aprobado por
+(lo que DEJÓ DE REGIR —elementos derogados, notas históricas por elemento, estampas
+viejas— se MUDA a `docs/BRD-historial.md`, que también comparte el espacio de IDs:
+un ID derogado conserva ahí su fila. Se consulta con `tools/historia.py <ID>`)
 ```
 
 ---
@@ -497,6 +512,36 @@ Verificar:
    amplió sus límites con dos valores nuevos y su marca quedó diciendo "los dos
    números exactos" — la tercera magnitud, que ya vivía en la regla, quedó fuera
    de la marca, fuera de la lista de calibración y fuera de toda lectura.
+10. 🔴 **La prueba que legisla.** Un `[CA]` VERIFICA lo que una regla dice; **nunca
+    introduce una decisión que ninguna regla enuncia** — una métrica, un modo, un aviso,
+    un cobro. Cuando el «entonces» de un criterio no se puede rastrear al texto de una
+    regla, hay dos salidas y ninguna es dejarlo: **la decisión sube a una regla** (con su
+    dueño y su contraste) **o el criterio se recorta**. Caso registrado (01/02-09-2026):
+    barridos los 588 criterios de un BRD aprobado, 10 legislaban; uno mandaba una
+    advertencia que **contradecía a la propia regla que decía verificar** (la regla
+    declaraba esa función como ajena al proveedor); otro guardaba **la diferencia
+    comercial del producto solo en una prueba** — y una diferencia comercial que vive en
+    un test no la ve ningún comprador ni ningún panel. Para quien construye, un criterio
+    es una obligación igual que una regla: **si legisla, legisla en silencio y sin dueño.**
+11. 🔴 **Cifras huérfanas.** Toda regla viva que lleve un **número con unidad** —días,
+    horas, %, dinero, mensajes, intentos— declara de dónde salió, con UNA de cuatro
+    marcas: cita a la investigación (`INV-XXX`) · palabras del dueño · `[A CALIBRAR]` ·
+    heredada de una regla que cita. Un número sin marca lo va a programar alguien **tal
+    cual**, y nadie sabe si es ley, estándar, deseo o error de copia. **Y la cifra LEGAL se
+    verifica contra el TEXTO OFICIAL de la norma y cita el artículo — nunca contra un
+    resumen, y nunca heredada de otra jurisdicción.** Caso registrado (02-09-2026): de
+    125 reglas con cifra, 5 huérfanas; **la de la ley de datos tenía dos de tres plazos
+    falsos** — decía «días hábiles» donde la ley dice «corridos», y traía un plazo de «72
+    horas» **que la ley chilena no contiene: era el del reglamento europeo, copiado**. Las
+    dos cifras falsas estaban repetidas en once documentos derivados. Los criterios
+    (`CA-`) quedan fuera del barrido: ahí un número es dato de escenario, no regla.
+12. **Las coordenadas del mapa: identificador único · sintaxis · familia · taxonomía.**
+    Son cuatro planos distintos y se auditan aparte: ID repetido o hueco sin mecanismo;
+    ID mal formado; elemento que vive en la familia equivocada (una restricción escrita
+    como regla, un pendiente escrito como riesgo); y elemento cuya sección no coincide con
+    su prefijo. **Un elemento en la familia equivocada NO se renumera: se deroga y renace
+    con ID nuevo en su familia** —las citas al viejo siguen existiendo—. Lo mecánico lo
+    caza `mapa-brd.py` (crea-suite); lo semántico se lee.
 
 Si hay problemas, marcar `[DUDA]` y preguntar al usuario antes de cerrar.
 
@@ -623,6 +668,21 @@ lanzarla; no la ejecuta por su cuenta. El umbral se ajusta con `--avisar-cada`.
 nuevo en vez de repetir deuda enrutada. **Sellar algo que no está enrutado lo desaparece**,
 y es la única forma de que este control mienta.
 
+**(6) Lo que dejó de regir SALE del documento vivo — y toda idea nueva se contrasta
+contra lo que ya se descartó.** Un documento que crece acumula lo que rige JUNTO a lo que
+dejó de regir —elementos derogados, notas *«hasta la vX decía…»*, estampas viejas— y quien
+lee de corrido se queda con lo último, no con lo vigente; **y paga por leerlo**: en un caso
+medido, casi un quinto del documento era historia. Regla: **el BRD guarda lo que rige;
+`docs/BRD-evidencia.md` guarda el porqué (§18); `docs/BRD-historial.md` guarda lo que dejó
+de regir.** Los tres comparten el espacio de IDs —un ID derogado conserva su fila en el
+historial— y `docs-check` los lee a los tres como fuente de definición, de modo que mudar
+la historia no rompe ninguna cita. La estampa de un derivado dice solo la versión. **Y el
+historial no es un archivo muerto: antes de proponer, se consulta** (`tools/historia.py
+<ID>` · `--buscar TEXTO`) — el dueño lo pidió con estas palabras: *«para que no lo vuelvas
+a proponer, cada idea debería contrastarse con ese documento»*. Una propuesta que ya se
+descartó y vuelve sin decir por qué esta vez sí le cuesta al dueño la misma conversación
+dos veces.
+
 ### Anti-patrones (prohibiciones)
 
 | # | Anti-patrón |
@@ -650,8 +710,13 @@ y es la única forma de que este control mienta.
 | 21 | Verificar los casos borde y dar por obvio el flujo principal. Lo central sin [CA] es el hueco más caro, porque es el camino que más se ejecuta. |
 | 22 | Dimensionar una corrección estructural con los casos que motivaron la alerta en vez de la lista completa del medidor (cerrar un puñado de una lista larga y declarar victoria). |
 | 23 | Recuperar una decisión de una sesión antigua y etiquetarla `[CONFIRMADO]` sin verificar QUIÉN dijo cada cifra. Lo que el asistente propuso y el usuario no respondió es `[SUPUESTO]`, nunca "textual" — una cifra lavada como cita entra con la autoridad de una cita, y una cita no se re-verifica. Evidencia: un cobro único entró como parte de "lo acordado, textual" siendo una propuesta del asistente construida sobre el plan de un competidor que el usuario había pegado como referencia; vivió `[CONFIRMADO]` hasta que el usuario lo desautorizó, y la verificación forense de la sesión original le dio la razón. |
-| 25 | Registrar una decisión del dueño sin contrastarla contra el estándar publicado cuando existe uno distinto y la diferencia tiene costo medible. Un documento que solo registra es un taquígrafo: el dueño se entera de que estaba bajo el estándar cuando ya está construido. |
 | 24 | Dar la cascada por cerrada sin correr el cazador de obsoletos, o sellar su línea base con hallazgos que no tienen fila en el enrutador. |
+| 25 | Registrar una decisión del dueño sin contrastarla contra el estándar publicado cuando existe uno distinto y la diferencia tiene costo medible. Un documento que solo registra es un taquígrafo: el dueño se entera de que estaba bajo el estándar cuando ya está construido. |
+| 26 | Escribir un criterio de aceptación cuyo «entonces» introduce una decisión que ninguna regla enuncia — la prueba que legisla (§11 punto 10). Si legisla, legisla sin dueño. |
+| 27 | Dejar en una regla viva un número con unidad sin decir de dónde salió, o heredar una cifra legal de un resumen o de otra jurisdicción en vez del artículo de la norma (§11 punto 11). |
+| 28 | Registrar una investigación cuya fuente no se puede volver a abrir —«guías 2026», «benchmarks públicos»— o dejar entrar una cifra de página de venta como hecho medido (formato de §18). |
+| 29 | Clasificar algo como «decisión del dueño» sin haber pasado por el principio 12(b): si la industria o la ley ya lo resolvieron, preguntárselo lo invita a inventar. |
+| 30 | Dejar en el documento vivo lo que dejó de regir —derogados, notas históricas, estampas viejas— o volver a proponer algo que el historial ya registra como descartado sin decir por qué esta vez sí (cambios posteriores, punto 6). |
 
 ---
 
