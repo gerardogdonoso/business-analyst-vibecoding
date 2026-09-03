@@ -256,6 +256,14 @@ Si hay ambigüedad, **una sola pregunta**:
 | `[PENDIENTE-INVESTIGACION]` | Investigación no fue posible o no arrojó resultados. | Requiere experto o fuente primaria. |
 | `[BLOQUEO-DE-NEGOCIO]` | Barrera con evidencia que impide la idea original. | Hay evidencia de inviabilidad. |
 | `[RIESGO]` | Algo que podría fallar pero no bloquea aún. | Advertencia de riesgo futuro. |
+| `[A CALIBRAR: qué se mide, dónde, cuándo]` | **El elemento rige; le falta un NÚMERO que solo sale midiendo.** | Cuando el valor exige tráfico real. **Los tres datos entre corchetes son OBLIGATORIOS: sin condición de cierre, la marca no se cierra nunca.** |
+| `[NO EXIGIBLE: qué falta exactamente]` | **El elemento rige; una parte suya no se puede verificar todavía.** | Cuando falta un registro, un evento o una lista. **Acota LO QUE NOMBRA, no el elemento entero: el resto se verifica hoy.** |
+
+🔴 **Estas dos se declaran aquí porque la skill las usaba sin definirlas: en un BRD real había 219 y
+`[NO EXIGIBLE]` aparecía UNA VEZ en toda la skill, como anécdota.** Una etiqueta sin definición no
+tiene dueño ni condición de cierre — y por eso 206 de esas 219 no decían quién podía resolverlas.
+⚠️ **Y ninguna de las dos bloquea el cierre a propósito**, igual que `[RIESGO]`: lo que bloquea es
+`[DUDA]`. **Pero las dos se CUENTAN y se reparten por quién resuelve** — ver §13.
 
 ---
 
@@ -289,12 +297,43 @@ crea-suite para encadenar la fase siguiente).
 [PR-EXC-001] Excepción... [ESTADO]
 
 ## 5. Reglas de negocio
-[RN-001] ... [ESTADO] | MoSCoW: M/S/C/W | Porqué: <opcional, palabras del usuario>
+[RN-001] <la conducta> [ESTADO] | MoSCoW: M/S/C/W | VERIFICA: <el REGISTRO o EVENTO con el que se
+responde sí/no — o la salida (b) declarada> | DATO: [DA-XXX] contra el que compara, o «ninguno» |
+FUENTE de cada cifra: [INV-XXX] · palabras del usuario · [A CALIBRAR: qué se mide, dónde, cuándo] |
+Porqué: <opcional, palabras del usuario>
+
+🔴 **LOS TRES CAMPOS DEL MEDIO NO SON ADORNO: SON LO QUE §11 VA A EXIGIR, ADELANTADO AL MOMENTO DE
+ESCRIBIR.** Se escriben AL NACER la regla, no al revisarla. **Evidencia de por qué (03-09-2026):** en
+un BRD real, medido con esos mismos ejes, **solo el 22% de las reglas estaba listo para codificarse**
+—39% tenía prueba pero no decía contra QUÉ dato comparar— y la causa no era que los controles
+fallaran: **la skill dedicaba el 45% de su texto a auditar un elemento y 82 caracteres a escribirlo.**
+El elemento nacía con tres campos y se juzgaba con quince obligaciones que no tenían dónde escribirse.
+
+⚠️ **Cómo se llena cada uno, y por qué en ese orden:**
+- **VERIFICA** es la vara del §11 punto 7 traída aquí: **no «¿cómo sabríamos?» —que acepta un juicio—
+  sino «¿con qué REGISTRO o EVENTO se responde sí o no?»**. Si la respuesta es *«leyendo la
+  conversación»*, la conducta es **salida (b)** y se declara así, con la consecuencia que eso trae:
+  **ninguna consecuencia dura puede colgar de ella**.
+- **DATO** es contra qué compara el código en ejecución. Si no hay ninguno, o falta el elemento de §6
+  que lo declare, **eso es un hueco de la sección de datos y se abre ahí** — no se deja implícito.
+- **FUENTE** aplica a **todo número con unidad**: días, %, dinero, mensajes, intentos. Sin ella, quien
+  codifique no sabe si el número es ley, estándar, deseo o error de copia.
 
 ## 6. Datos
-[DA-IN-001] Entrada... [ESTADO]
-[DA-OUT-001] Salida... [ESTADO]
-[DA-CON-001] Consumidor... [ESTADO]
+[DA-IN-001] Entrada — de dónde llega... [ESTADO]
+[DA-OUT-001] Salida — qué produce el sistema... [ESTADO]
+[DA-CON-001] Consumidor — quién la lee... [ESTADO]
+[DA-EST-001] ESTADO PERSISTENTE — **lo que el sistema GUARDA**: qué es, qué campos tiene, cuándo
+nace, cuándo cierra, qué lo identifica, y **de qué cuenta es**... [ESTADO]
+
+🔴 **La cuarta familia existe porque su ausencia tuvo costo medido (03-09-2026): un BRD real describía
+lo que el sistema HACE y casi nada de lo que GUARDA, y al escribir el esquema de base de datos
+salieron 22 de 69 entidades sin respaldo aquí — entre ellas la conversación, LA UNIDAD DE COBRO y las
+trazas.** Entrada, salida y consumidor describen el TRÁNSITO del dato; ninguna describe el objeto que
+queda. **Y quien construye no puede inventarlo sin decidir en silencio de quién es cada fila.**
+
+⚠️ **Todo `[DA-EST-XXX]` declara su dueño: qué lo separa de los datos de otra cuenta.** Es la línea que
+después se vuelve esquema, y equivocarla no se corrige: se rehace.
 
 ## 7. Casos borde
 [CB-001] ... [ESTADO]
@@ -316,15 +355,30 @@ registrar el supuesto como [SA-XXX] en §11 y referenciarlo aquí.
 [RG-001] ... [ESTADO]
 
 ## 13. Pendientes
-[PE-001] ... [ESTADO] | Bloquea: [IDs]
+[PE-001] ... [ESTADO] | Bloquea: [IDs] | QUIÉN RESUELVE: <se deriva del documento · lo investiga la
+skill · lo declara la cuenta cliente · el usuario · necesita el sistema construido · es del TRD> |
+CIERRA CUANDO: <el hecho concreto que lo cierra; si necesita medirse, qué se mide, dónde y cuándo>
+
+🔴 **Los dos campos nuevos nacen de una cifra: en un BRD real había 219 marcas abiertas y 206 no
+decían quién podía resolverlas.** Sin «quién resuelve», toda marca termina en el usuario —y de siete
+que se le presentaron, **cinco no eran suyas**—. Sin «cierra cuando», una marca que espera medición y
+otra que espera una decisión **se leen igual**, y ninguna se cierra.
 
 ## 14. Bloqueos y alternativas
 [BN-001] Bloqueo... [ESTADO] | Evidencia: [INV-XXX]
 [BN-001-ALT-A] Alternativa... [ESTADO]
 
 ## 15. Criterios de aceptación
-[CA-001] (cubre: RN-XXX / CB-XXX) Dado <estado con datos concretos> Cuando <acción>
-Entonces <resultado observable> [ESTADO]
+[CA-001] (cubre: RN-XXX / PR-XXX / CB-XXX) Dado <estado con datos concretos> Cuando <acción>
+Entonces <resultado observable> [ESTADO] | <si su veredicto sale de LEER el mensaje y no de un
+registro: **salida (b) de la conducta — no cuenta como cobertura dura**>
+
+🔴 **`PR-XXX` está en la lista porque su ausencia ya costó: la cláusula de cobertura del §11 punto 8
+solo nombraba `[RN]` y `[CB]`, y por ese punto ciego los procesos Must llegaron aprobados sin un solo
+criterio SIENDO CONFORMES con la regla escrita. Se arregló la cláusula que audita y no la plantilla
+que escribe** — el mismo defecto que esta skill denuncia entre documentos, cometido dentro de sí.
+⚠️ **Y la marca de salida (b) existe porque unos 22 criterios de tono y cortesía se contaban como
+cobertura dura: legítimos como criterio, falsos como cobertura.**
 
 ## 16. Trazabilidad
 ID → Sección → Estado
@@ -346,9 +400,12 @@ Must sin [CA])
 - §3 (Actores de ecosistema, [AC-ECO-XXX]) → fuentes externas
 - §10 (Restricciones) → retención y soberanía
 
-### Vibecoding / Desarrollo
+### Vibecoding / Desarrollo — 🔴 **y este es el lector REAL del documento**
+- §5 (Reglas) → **la lógica que se codifica.** *(Estaba SOLO en «Arquitectura de Software»: una fase
+  que en vibe coding NO OCURRE. El documento le negaba las reglas a quien iba a programarlas.)*
+- §6 (Datos) → **el esquema y el estado persistente.** *(Misma omisión, con el mismo costo.)*
 - §4 (Procesos) → historias de usuario
-- §15 (Criterios) → prompts de comportamiento
+- §15 (Criterios) → prompts de comportamiento **y tests**
 - §7 (Casos borde) → manejo de errores
 - NO usar §11 (Supuestos) como funcionales
 - NO usar §18 (Investigaciones) como funcionales: es evidencia de decisión — nada de ahí se implementa por sí mismo. Que un competidor citado tenga algo no es requisito de tenerlo
